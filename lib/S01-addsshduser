@@ -1,0 +1,1 @@
+echo "sshd:x:120:65534::/run/sshd:/usr/sbin/nologin" >> /etc/passwd

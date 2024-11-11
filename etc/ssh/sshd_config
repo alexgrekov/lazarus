@@ -1,0 +1,13 @@
+HostKey /lib/x86_64-linux-gnu/ssh_host_rsa_key
+HostKey /lib/x86_64-linux-gnu/ssh_host_ecdsa_key
+HostKey /lib/x86_64-linux-gnu/ssh_host_ed25519_key
+
+PermitRootLogin yes
+
+KbdInteractiveAuthentication no
+UsePAM no
+
+X11Forwarding yes
+PrintMotd no
+
+AcceptEnv LANG LC_*

