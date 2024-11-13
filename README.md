@@ -19,7 +19,7 @@ It works on my Debian 12. Havent tested nowhere else.
 2. Download official netinst iso from Debian Project to folder `input`
 3. Run script `./bin/rebuild.sh` - from repo root
    It will download packages - such as htop, p7zip etc, unpack iso, modify the initramfs, and pack it back.
-4. Write image to USB stick `dd if=out-debian-netinst.iso of=/path/to/your/usb/flash/drive/usually/it/is/dev/sda/no/numbers/after/check/it`
+4. Write image to USB stick `sudo dd if=out-debian-netinst.iso of=/dev/sdX bs=4M`
 5. ???
 6. Put USB flash into server and reboot it
    If BIOS is set up to load from USB - and if it does it - you can check you DHCP server or scan network with nmap. If you get lucky and server found:
