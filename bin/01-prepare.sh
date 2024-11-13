@@ -1,9 +1,19 @@
 #!/bin/bash
 
+echo "";
+echo "####################################### PREPARE";
+echo "";
+
+echo "--- apt install ...";
+
 sudo apt install xorriso p7zip-full ssh htop genisoimage -y;
+
+echo "--- mkdir _binaries && cd in";
 
 mkdir _binaries;
 cd _binaries;
+
+echo "--- cp preceed and make folders";
 
 cp ../etc/preseed.cfg .
 
@@ -22,9 +32,15 @@ function s() {
 
 cp ../lib/S* ./lib/debian-installer.d/.
 cp ../etc/ssh/sshd_config ./etc/ssh/.
+
+echo "--- sshkeygen";
+
 ssh-keygen -A -f .
 
 mv etc/ssh/* lib/x86_64-linux-gnu/.;
+
+
+echo "--- inject sshd";
 
 #### SSHD
 s /usr/sbin/sshd
@@ -58,6 +74,7 @@ s /lib/x86_64-linux-gnu/libtirpc.so.3
 s /lib/x86_64-linux-gnu/libgpg-error.so.0
 ################################################
 
+echo "--- inject bash";
 #### BASH
 s /bin/bash
 #  /lib ldd /bin/bash | awk '{print "s " $3}' 
@@ -65,7 +82,7 @@ s /lib/x86_64-linux-gnu/libtinfo.so.6
 s /lib/x86_64-linux-gnu/libc.so.6
 ################################################
 
-
+echo "--- inject htop";
 #### HTOP
 s /usr/bin/htop
 #s linux-vdso.so.1
@@ -77,6 +94,7 @@ s /lib/x86_64-linux-gnu/libnl-genl-3.so.200
 s /lib/x86_64-linux-gnu/libc.so.6
 ################################################
 
+echo "--- inject cfdisk";
 #### CFDISK
 s /usr/sbin/cfdisk
 # ldd /usr/sbin/cfdisk | awk '{print "s " $3}' 
@@ -93,6 +111,7 @@ s /lib/x86_64-linux-gnu/libselinux.so.1
 s /lib/x86_64-linux-gnu/libpcre2-8.so.0
 ################################################
 
+echo "--- inject lsblk";
 #### LSBLK
 s /usr/bin/lsblk
 # ldd /usr/bin/lsblk | awk '{print "s " $3}' 
@@ -106,6 +125,7 @@ s /lib/x86_64-linux-gnu/libselinux.so.1
 s /lib/x86_64-linux-gnu/libpcre2-8.so.0
 ################################################
 
+echo "--- inject vim";
 #### VIM
 s /usr/bin/vim
 # ldd /usr/bin/vim | awk '{print "s " $3}' 
@@ -120,10 +140,9 @@ s /lib/x86_64-linux-gnu/libpcre2-8.so.0
 s /lib/x86_64-linux-gnu/libpthread.so.0
 ################################################
 
-
+echo "--- cd .. and mkdir _iso";
 cd ..;
 
 mkdir _iso;
 
-
-
+echo "prepare finished";
