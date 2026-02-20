@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install p7zip-full ssh htop genisoimage -y;
+sudo apt install p7zip-full ssh htop genisoimage xorriso -y;
 
 mkdir _binaries;
 cd _binaries;
