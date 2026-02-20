@@ -6,9 +6,10 @@ echo "";
 
 echo "--- apt install ...";
 
-sudo apt install xorriso p7zip-full ssh htop genisoimage -y;
+sudo apt install xorriso p7zip-full ssh htop genisoimage xorriso -y;
 
 echo "--- mkdir _binaries && cd in";
+
 
 mkdir _binaries;
 cd _binaries;

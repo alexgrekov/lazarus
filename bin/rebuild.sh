@@ -10,6 +10,3 @@ bin/06-patch-boot.sh
 bin/09-pack-initrd.sh
 bin/10-get-isohdprfx.sh
 bin/11-build-iso.sh
-
-#bin/10-compile-iso.sh
-#bin/11-magic.sh
