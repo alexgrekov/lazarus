@@ -28,4 +28,10 @@ It works on my Debian 12. Havent tested nowhere else.
 
 Good luck!
 
+
+## Debian bootstrap
+
+When you logged in with ssh - you can call `debconf -o d-i /usr/bin/main-menu`
+
+
 P.S. project is not finished yet, you still cannot install Debian from it - but you can get access to server and take your data from it. May be - repare bootloader.

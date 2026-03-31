@@ -7,7 +7,7 @@
 
 xorriso -as mkisofs \
   -o out-debian-netinst.iso \
-  -isohybrid-mbr isolinux/isohdpfx.bin \
+  -isohybrid-mbr isohdpfx.bin \
   -c isolinux/boot.cat \
   -b isolinux/isolinux.bin \
   -no-emul-boot \

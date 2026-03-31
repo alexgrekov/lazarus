@@ -8,5 +8,5 @@ bin/02-unpack-initrd.sh
 bin/03-patch-initrd.sh
 bin/06-patch-boot.sh
 bin/09-pack-initrd.sh
-bin/10-compile-iso.sh
-bin/11-magic.sh
+bin/10-get-isohdprfx.sh
+bin/11-build-iso.sh
